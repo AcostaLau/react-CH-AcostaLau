@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+     font-size: 62.5%; /* *Reset para REMS - 62.5% = 10px de 16px* */
+
+}
+    
+
+/*------------------------------------------------------                        NAVBAR 
+-----------------------------------------------------*/
+img{
+    height: 100%;
+    width: 100%;
+}
+.cajaLogo{
+    height: 15rem;
+    width: 15rem;
+}
+
+.containerNav{
+    align-items: center;
+}
+
+.divContacto{
+    display: flex;
+    justify-content: flex-end;
+    width: 100rem;
+}
+.tamañoTexto{
+    font-size: 2rem;
+}
+.tamañoWidget{
+    height: 4.5rem;
+    width: 4.5rem;
+}
