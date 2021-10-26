@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import '../css/count.css'
 
-export const ItemCount = ({producto}) => {
+export const ItemCount = ({producto, valorInicial, stock}) => {
 
-const [valor, setValor] = useState(1)
+const [valor, setValor] = useState(valorInicial)
 
         const mostrarAgregado = () =>{
                 console.log(`se agrego ${valor} de  ${producto} al carrito`)
@@ -11,9 +11,12 @@ const [valor, setValor] = useState(1)
 
 
     const suma = () => {
+        if(valor === stock){
+            return valor
+        }else{
             setValor(valor + 1)
             mostrarAgregado()
-        
+        }
     }
     const resta = () => {
         if(valor === 0){

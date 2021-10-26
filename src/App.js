@@ -19,14 +19,22 @@ export default function App() {
         <h1 className= 'tituloMain'>Nuestros Productos</h1>
         <div className = 'contenedorArticulos' >
 
-          <ItemListContainer titulo= 'Banana 1' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13_pro__eh103ckbrwom_medium.jpg'/>
+          <ItemListContainer />
 
-          <ItemListContainer titulo='Banana 2' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13__ciafj2xeuyaa_medium.jpg'/>
+          <ItemListContainer />
 
-          <ItemListContainer titulo='Banana 3' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_12__cylgkq31mbo2_medium.jpg'/>
+          <ItemListContainer />
 
-          <ItemListContainer titulo='Banana 4' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_se__f45s203j9r2i_medium.jpg'/>
+          <ItemListContainer />
           
+
+
+          {/*  
+            1:titulo= 'Banana 1' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13_pro__eh103ckbrwom_medium.jpg'
+            2 :titulo='Banana 2' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13__ciafj2xeuyaa_medium.jpg'
+            3: titulo='Banana 3' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_12__cylgkq31mbo2_medium.jpg'
+            4: titulo='Banana 4' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_se__f45s203j9r2i_medium.jpg'
+          */}
         </div>      
       </body>
     </div>
