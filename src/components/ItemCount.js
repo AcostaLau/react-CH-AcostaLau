@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../css/count.css'
 
+
+// ESTOS PARAMETROS LLEGAN DE ItemList.js
 export const ItemCount = ({producto, valorInicial, stock}) => {
 
 const [valor, setValor] = useState(valorInicial)

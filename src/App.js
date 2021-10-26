@@ -18,17 +18,11 @@ export default function App() {
           {/* Productos */}
         <h1 className= 'tituloMain'>Nuestros Productos</h1>
         <div className = 'contenedorArticulos' >
-
           <ItemListContainer />
-
           <ItemListContainer />
-
           <ItemListContainer />
-
           <ItemListContainer />
           
-
-
           {/*  
             1:titulo= 'Banana 1' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13_pro__eh103ckbrwom_medium.jpg'
             2 :titulo='Banana 2' imagen='https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13__ciafj2xeuyaa_medium.jpg'
@@ -40,8 +34,6 @@ export default function App() {
     </div>
   );
 }
-
-
 
 
 //export default App;  ===> de esta forma se utilizaria si fuese una arrow function, como lo hice en NavBar

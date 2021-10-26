@@ -1,41 +1,28 @@
 import React from 'react'
-import { ItemList } from './ItemList'
+import { ItemCount } from './ItemCount'
+import { Card } from 'react-bootstrap'
 
 
-const Productos = [
-    {
-        id: 1,
-        nombre: 'Banana 1',
-        imagen: 'https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13_pro__eh103ckbrwom_medium.jpg'
-    },
-    {
-        id: 2,
-        nombre: 'Banana 2',
-        imagen: 'https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13__ciafj2xeuyaa_medium.jpg'
-    },
-    {
-        id: 3,
-        nombre: 'Banana 3',
-        imagen: 'https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_12__cylgkq31mbo2_medium.jpg'
-    },
-    {
-        id: 4,
-        nombre: 'Banana 4',
-        imagen: 'https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_se__f45s203j9r2i_medium.jpg'
-    }
-]
 
-export const Item = () => {
 
-    
 
-return(
-    <div>
-        {Productos.map((producto) => {
-            <ItemList resultado = {producto}/>
-        })}
-    </div>
+
+export const Item = ({data}) => {
+    console.log(data)
+    return(
+        <div>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src= {data.imagen} />
+                <Card.Body>
+                    <Card.Title>{data.nombre}</Card.Title>
+                    <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                    </Card.Text>
+                '<ItemCount producto= {data.nombre} valorInicial = {1} stock = {10}/>'
+                </Card.Body>
+            </Card>
+        </div>
     )
-
 }
 
