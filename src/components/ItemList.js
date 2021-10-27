@@ -1,18 +1,27 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import  '../css/itemContainer.css'
 import { Item } from './Item'
 
 
-
-// const Productos = [
-    
-// ]
-
-// RESULTADO VIENE DE ITEM.JS
 export const ItemList = () => {
+
+    // declaramos un array vacio el cual se va a rellenar con el array de objetos una vez que la funtion getProductos sea activada
     const [productos, setProductos] = useState([])
+    // usamo el useEffect para que solo se ejecute una vez sola 
+    useEffect(() => {
+        
+    // declaramos un promise para que la function getProductos sea activada una vez que la info llega
+        const getPromise = new Promise((res, rej) =>{
+            res(getProductos());
+        })
+    
+        getPromise
+        .then((resultado) => console.log(resultado))
+        .catch((reject) => console.log(reject))
+    }, [])
     const getProductos = () =>{
         setTimeout(() =>{
+            // ponemos setProductos ya que cuando getProductos sea activado el useState cambiara con este array de objetos
             setProductos([{
                 id: 1,
                 nombre: 'Banana 1',
@@ -35,19 +44,13 @@ export const ItemList = () => {
             }])
         }, 2000)
     }
-
-    const getPromise = new Promise((res, rej) =>{
-        res(getProductos());
-    })
-
-    getPromise
-    .then((resultado) => console.log(resultado))
-    .catch((reject) => console.log(reject))
-
+   
+// toda esta info llega a Item que es el componente que tiene la card para poder darle forma a estos objetos
     return (
+        // a 'productos' que ahora contiene el array de objetos le realizamos un map.
         productos.map((product) =>{
-            console.log('product', product)
             return(
+                // a este map le pasamos el id y por data le pasamos todo el objeto.
                 <Item key={product.id} data = {product}></Item>
             )
         })

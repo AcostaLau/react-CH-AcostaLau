@@ -5,6 +5,12 @@
      font-size: 62.5%; /* *Reset para REMS - 62.5% = 10px de 16px* */
 
 }
-    
+
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
 
 
