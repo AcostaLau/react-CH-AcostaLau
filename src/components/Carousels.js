@@ -1,16 +1,15 @@
 import React from 'react'
-import  Carousel from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from 'react-bootstrap'
 
 
-export const Carousel = () => {
+export const Carousels = () => {
     return (
         <div>
             <Carousel>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=First slide&bg=373940"
+      src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/313/themes/amazonas/slide-1633066468523-7124875580-a0511021b7fbde743d24a267a357e3291633066473-1920-1920.png?1657216085"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -21,7 +20,7 @@ export const Carousel = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Second slide&bg=282c34"
+      src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/313/themes/amazonas/slide-1633092126358-2251227718-6acdcd6c903c304a1de54f184837661e1633092126-1920-1920.jpg?1657216085"
       alt="Second slide"
     />
 
@@ -33,7 +32,7 @@ export const Carousel = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Third slide&bg=20232a"
+      src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/313/themes/amazonas/slide-1633093705132-3428164024-6d42ec37b62b49180f864a7002f47d411633093708-1920-1920.png?1657216085"
       alt="Third slide"
     />
 

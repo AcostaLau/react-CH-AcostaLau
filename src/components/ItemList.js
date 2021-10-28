@@ -25,22 +25,22 @@ export const ItemList = () => {
             setProductos([{
                 id: 1,
                 nombre: 'Banana 1',
-                imagen: 'https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13_pro__eh103ckbrwom_medium.jpg'
+                imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/313/products/ttt1-0f57261c4cf9edbacc16341000430372-480-0.jpeg'
             },
             {
                 id: 2,
                 nombre: 'Banana 2',
-                imagen: 'https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_13__ciafj2xeuyaa_medium.jpg'
+                imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/313/products/rrrrrrrrrr1-fb54b349ac3b8607bc16340995761219-480-0.jpeg'
             },
             {
                 id: 3,
                 nombre: 'Banana 3',
-                imagen: 'https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_12__cylgkq31mbo2_medium.jpg'
+                imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/313/products/qqqqqqqq1-c31bc50b148f3d05fb16340994341010-480-0.jpeg'
             },
             {
                 id: 4,
                 nombre: 'Banana 4',
-                imagen: 'https://www.apple.com/v/iphone/buy/h/images/overview/compare_iphone_se__f45s203j9r2i_medium.jpg'
+                imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/313/products/lll-a5921ff69d774bb1ff16340977707425-480-0.jpeg'
             }])
         }, 2000)
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ItemCount } from './ItemCount'
 import { Card } from 'react-bootstrap'
-
+import '../css/item.css'
 
 
 
@@ -11,7 +11,7 @@ export const Item = ({data}) => {
     console.log('verificacion de que llega la data ', data)
     return(
         <div>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '33rem' }}>
                 {/* llamamos a la imagen a traves de data.imagen */}
                 <Card.Img variant="top" src= {data.imagen} />
                 <Card.Body>

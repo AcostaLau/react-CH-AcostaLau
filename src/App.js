@@ -2,10 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import './app.css'
-import { Carousels } from './components/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import { Carousels } from './components/Carousels';
 
 
 // como es una function normal el export default puede ir al inicio.
