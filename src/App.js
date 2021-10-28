@@ -2,6 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import './app.css'
+import { Carousels } from './components/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -15,6 +17,7 @@ export default function App() {
         <NavBar/>
       </header>
       <body>
+        <Carousels/>
           {/* Productos */}
         <h1 className= 'tituloMain'>Nuestros Productos</h1>
         <div className = 'contenedorArticulos' >
