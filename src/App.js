@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import './app.css'
 import { Carousels } from './components/Carousels';
+import { ItemDetailCointainer } from './components/ItemDetailCointainer';
 
 
 // como es una function normal el export default puede ir al inicio.
@@ -19,6 +20,7 @@ export default function App() {
         <h1 className= 'tituloMain'>Nuestros Productos</h1>
         <div className = 'contenedorArticulos' >
           <ItemListContainer />
+          <ItemDetailCointainer/>
         </div>      
       </body>
     </div>

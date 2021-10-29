@@ -3,6 +3,7 @@ import  '../css/itemContainer.css'
 import { Item } from './Item'
 
 
+
 export const ItemList = () => {
 
     // declaramos un array vacio el cual se va a rellenar con el array de objetos una vez que la funtion getProductos sea activada
