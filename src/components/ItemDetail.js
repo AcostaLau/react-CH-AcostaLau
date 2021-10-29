@@ -24,17 +24,17 @@ newPromise
 .catch((reject) => console.log(reject))
 }, [])
     return (
-        <>
+        <ul>
             {producto.map((productos) =>{
                 return(
-                <ul>
+                
                     <li className='tamañoLetra' key={productos.id}>
                         {productos.nombre}
                     </li>
-                </ul>
+                
                 
                 )
             })}
-        </>
+        </ul>
     )
 }

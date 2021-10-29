@@ -1,3 +1,4 @@
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
@@ -19,8 +20,18 @@ export default function App() {
           {/* Productos */}
         <h1 className= 'tituloMain'>Nuestros Productos</h1>
         <div className = 'contenedorArticulos' >
-          <ItemListContainer />
-          <ItemDetailCointainer/>
+          <Router>
+            <Switch>
+
+              <Route exact path='/' component={<ItemListContainer />}/> {/* El route me crea la coneccion entre el componente y la ruta*/} 
+              <Route exact path='/detalle' component={<ItemDetailCointainer/>}/> 
+              {/*exact = nos lleva a la ruta exacta
+                path: es el nombre por el cual vamos a navegar
+                component: vamos a declarar el componennte*/}
+              
+            </Switch>
+          </Router>
+          
         </div>      
       </body>
     </div>
