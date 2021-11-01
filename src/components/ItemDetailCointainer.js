@@ -3,7 +3,7 @@ import { ItemDetail } from './ItemDetail'
 export const ItemDetailCointainer = () => {
     return (
         <div>
-            <ItemDetail/>
+        <ItemDetail/>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+
 import '../css/itemDetail.css'
 
 export const ItemDetail = () => {
@@ -24,7 +25,8 @@ newPromise
 .catch((reject) => console.log(reject))
 }, [])
     return (
-        <ul>
+        
+            <ul>
             {producto.map((productos) =>{
                 return(
                 
@@ -36,5 +38,6 @@ newPromise
                 )
             })}
         </ul>
+           
     )
 }
