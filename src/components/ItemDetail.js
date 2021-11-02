@@ -1,43 +1,28 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
+import { Card } from 'react-bootstrap'
 
 import '../css/itemDetail.css'
 
-export const ItemDetail = () => {
-const [producto, setProducto] = useState([]);
+export const ItemDetail = ({producto}) => {
 
-const getProducto = () =>{
-    setTimeout(() =>{
-        setProducto([{
-            id: 6,
-            nombre: 'Banana 1',
-            imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/313/products/ttt1-0f57261c4cf9edbacc16341000430372-480-0.jpeg'}])
-    }, 4000)
-}
-
-
-useEffect(() => {
-const newPromise = new Promise((res, rej) =>{
-    res(getProducto())
-})
-
-newPromise
-.then((resultado) => console.log(resultado))
-.catch((reject) => console.log(reject))
-}, [])
-    return (
-        
-            <ul>
-            {producto.map((productos) =>{
-                return(
-                
-                    <li className='tamañoLetra' key={productos.id}>
-                        {productos.nombre}
-                    </li>
-                
-                
-                )
-            })}
-        </ul>
-           
-    )
+            <div>
+            <Card style={{ width: '33rem' }}>
+                {/* llamamos a la imagen a traves de data.imagen */}
+                <Card.Img variant="top" src= {producto.imagen} />
+                <Card.Body>
+                    {/* llamamos a la imagen a traves de data.nombre */}
+                    <Card.Title>{producto.nombre}</Card.Title>
+                    <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                    </Card.Text>
+                    {/* llamamos a la imagen a traves de data.nombre y ademas le pasamos como parametro eso para que pueda hacer la cuneta  */}
+                    {/* <div className='contenedorBotonesItem'>
+                        <ItemCount producto= {data.nombre} valorInicial = {1} stock = {10}/>'
+                        <Link  to='/detalle'><button className='botonVerMas'>Ver mas</button></Link>
+                    </div>  */}
+                </Card.Body>
+            </Card>
+        </div>
+    
 }

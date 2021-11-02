@@ -1,9 +1,9 @@
 import React from 'react'
 import { ItemDetail } from './ItemDetail'
-export const ItemDetailCointainer = () => {
+export const ItemDetailCointainer = (producto) => {
     return (
         <div>
-        <ItemDetail/>
+        <ItemDetail data={producto}/>
         </div>
     )
 }
