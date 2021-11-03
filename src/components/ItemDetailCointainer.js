@@ -5,8 +5,8 @@ import { arrayProductos } from './ItemList'
 
 export const ItemDetailCointainer = () => {
 
-    const {idDetalle} = useParams()
-    const producto = arrayProductos.find(producto => producto.id.toString() === idDetalle)
+    const {idProducto} = useParams()
+    const producto = arrayProductos.find(producto => producto.id.toString() === idProducto)
     return (
         <div>
         <ItemDetail producto={producto}/>
