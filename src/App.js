@@ -24,7 +24,7 @@ export default function App() {
             <Switch>
               <Route exact path='/' component={ItemListContainer}/>
               <Route exact path='/producto/:idProducto' component={ItemListContainer}/> {/* El route me crea la coneccion entre el componente y la ruta*/} 
-              <Route exact path='/detalle' component={ItemDetailCointainer}/>
+              <Route exact path='/detalle/:idProducto' component={ItemDetailCointainer}/>
               {/*exact = nos lleva a la ruta exacta
                 path: es el nombre por el cual vamos a navegar
                 component: vamos a declarar el componennte*/}

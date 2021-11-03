@@ -3,6 +3,7 @@ import { ItemCount } from './ItemCount'
 import { Card } from 'react-bootstrap'
 import '../css/item.css'
 import { Link } from 'react-router-dom'
+// import { ItemDetailCointainer } from './ItemDetailCointainer'
 
 
 
@@ -25,7 +26,7 @@ export const Item = ({data}) => {
                     {/* llamamos a la imagen a traves de data.nombre y ademas le pasamos como parametro eso para que pueda hacer la cuneta  */}
                     <div className='contenedorBotonesItem'>
                         <ItemCount producto= {data.nombre} valorInicial = {1} stock = {10}/>'
-                        <Link  to='/detalle'><button className='botonVerMas'>Ver mas</button></Link>
+                        <Link  to= {`/detalle/${data.id}`} ><button className='botonVerMas'>Ver mas</button></Link>
                     </div> 
                 </Card.Body>
             </Card>

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router'
 import { Item } from './Item'
 
-const arrayProductos = [
+export const arrayProductos = [
     {
         id: 1,
         nombre: 'Air Jordan 3 Retro',
