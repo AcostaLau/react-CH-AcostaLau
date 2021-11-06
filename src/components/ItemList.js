@@ -157,7 +157,7 @@ export const arrayProductos = [
     }
 ]
 
-
+export let titulo = '';
 export const ItemList = () => {
 
     // declaramos un array vacio el cual se va a rellenar con el array de objetos una vez que la funtion getProductos sea activada
@@ -185,20 +185,29 @@ export const ItemList = () => {
                 setProductos(arrayProductos.filter(product => product.categoria === idProducto))
             } else {
                 setProductos(arrayProductos)
+                
             }
             // ponemos setProductos ya que cuando getProductos sea activado el useState cambiara con este array de objetos
             
         }, 1000)
     }
-   
+
+    
 // toda esta info llega a Item que es el componente que tiene la card para poder darle forma a estos objetos
     return (
+
         // a 'productos' que ahora contiene el array de objetos le realizamos un map.
         productos.map((product) =>{
+            
             return(
+    
+                        <Item key={product.id} data = {product}></Item>
+                    
+                 
                 // a este map le pasamos el id y por data le pasamos todo el objeto.
-                <Item key={product.id} data = {product}></Item>
+                
             )
         })
+
     )
 }

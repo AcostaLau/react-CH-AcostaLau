@@ -4,7 +4,7 @@ import { ItemListContainer } from './components/ItemListContainer';
 import './app.css'
 import { ItemDetailCointainer } from './components/ItemDetailCointainer';
 import {NavBar} from './components/NavBar/NavBar';
-import { Filtros } from './components/filtros/Filtros';
+import { CartWidget } from './components/CartWidget';
 
 
 // como es una function normal el export default puede ir al inicio.
@@ -17,18 +17,12 @@ export default function App() {
       <NavBar/>
       </header>
       <body>
-          {/* Productos */}
-        <h1 className= 'tituloMain'>Nuestros Productos</h1> 
-        <Filtros/>       
-        <div className = 'contenedorArticulos' >
+            <div className = 'contenedorArticulos' >
             <Switch>
               <Route exact path='/' component={ItemListContainer}/>
               <Route exact path='/producto/:idProducto' component={ItemListContainer}/> {/* El route me crea la coneccion entre el componente y la ruta*/} 
               <Route exact path='/detalle/:idProducto' component={ItemDetailCointainer}/>
-              {/*exact = nos lleva a la ruta exacta
-                path: es el nombre por el cual vamos a navegar
-                component: vamos a declarar el componennte*/}
-              
+              <Route exact path='/cart/:id' component={CartWidget}></Route>
             </Switch>
           
           

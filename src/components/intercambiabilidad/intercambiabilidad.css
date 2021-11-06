@@ -1,37 +1,3 @@
-.tamañoLetra{
-    font-size: 4rem;
-}
-.cardDetail{
-    display: flex;
-    flex-direction: row;
-    width: 100rem;
-    height: 30rem;
-}
-.contenedorDetalle{
-    width: 100rem;
-    height: 42rem;
-}
-.nombreDetalle{
-    font-size: 3rem;
-}
-.contenedorTitulo{
-    width: 57rem;
-    height: 6rem;
-}
-
-.cardText{
-    font-size: 1.5rem;
-}
-.imgDetalle{
-    width: 100%;
-    height: 100%;
-}
-.contenedorBotonesDetalle{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
 button.fancy {
     background-color: transparent;
     border: 2px solid #000;
@@ -70,7 +36,7 @@ button.fancy {
     transition: background 0.3s linear, width 0.3s linear;
    }
    
-   button.fancy a {
+   button.fancy p {
     font-size: 1.125em;
     line-height: 1.33333em;
     padding-left: 2em;
@@ -122,7 +88,7 @@ button.fancy {
     background: white;
    }
    
-   button.fancy:hover a {
+   button.fancy:hover p {
     color: white;
     padding-left: 1.5em;
    }

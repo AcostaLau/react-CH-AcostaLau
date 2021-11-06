@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom'
 // aca nos llega la data que le pasamos por ListItem
 export const Item = ({data}) => {
     console.log('verificacion de que llega la data ', data)
+
     return(
         <div>
             <Card style={{ width: '33rem' }}>

@@ -1,26 +1,38 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-
+import {ItemCount} from './ItemCount'
 import '../css/itemDetail.css'
+import { Link } from 'react-router-dom'
+import {Intercambiabilidad} from './intercambiabilidad/Intercambiabilidad'
+
 
 export const ItemDetail = ({producto}) => {
    
         return(
-            <div>
+            <div className='contenedorDetalle'>
                 
-                <Card style={{ width: '33rem' }}>
-                        {/* llamamos a la imagen a traves de producto.imagen */}
-                            <Card.Img variant="top" src= {producto.imagen} />
+                <Card  className='cardDetail'>
+                        <div>
+                        <Card.Img className='imgDetalle' variant="top" src= {producto.imagen} />
+                        </div>
+                            
                         <Card.Body>
-                        {/* llamamos a la imagen a traves de producto.nombre */}
-                                <Card.Title>{producto.nombre}</Card.Title>
-                                <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                            </Card.Text>
-                            {/* <div className='contenedorBotonesItem'>
-                            <ItemCount producto= {producto.nombre} valorInicial = {1} stock = {10}/>'
-                            </div>  */}
+                                <div className='contenedorTitulo'>
+                                <Card.Title className='nombreDetalle'>{producto.nombre}</Card.Title>
+                                </div>
+                                <Card.Text className='cardText'>sizes 8-10</Card.Text>
+
+
+                            <div className='contenedorBotonesDetalle'>
+                                <div >
+                                    <ItemCount producto= {producto.nombre} valorInicial = {1} stock = {10}/>'
+                                </div>
+                                
+                                <div>
+                                    <Intercambiabilidad/>
+                                </div> 
+                            </div>
+                            
                         </Card.Body>
                 </Card>
             </div>
