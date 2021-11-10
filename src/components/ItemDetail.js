@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Card } from 'react-bootstrap'
 import {ItemCount} from './ItemCount'
 import '../css/itemDetail.css'
-import { Link } from 'react-router-dom'
 import {Intercambiabilidad} from './intercambiabilidad/Intercambiabilidad'
+import { CartContext } from './context/CartContext'
+
 
 
 export const ItemDetail = ({producto}) => {
-   
+        
+    
+        const {agregarProducto, cartList} = useContext(CartContext)
+
+        const ejecutarFunction = ()=>{agregarProducto({producto})}
+        console.log('hola', cartList)
         return(
             <div className='contenedorDetalle'>
                 
@@ -29,7 +35,7 @@ export const ItemDetail = ({producto}) => {
                                 </div>
                                 
                                 <div>
-                                    <Intercambiabilidad/>
+                                    <Intercambiabilidad productos = {producto} ejecutarFunction = {ejecutarFunction}/>
                                 </div> 
                             </div>
                             

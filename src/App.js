@@ -5,31 +5,37 @@ import './app.css'
 import { ItemDetailCointainer } from './components/ItemDetailCointainer';
 import {NavBar} from './components/NavBar/NavBar';
 import { CartWidget } from './components/CartWidget';
+import  CartContextProvider  from './components/context/CartContext';
+
 
 
 // como es una function normal el export default puede ir al inicio.
 // si fuera una arrow deberia ir al final como el la linea 17
 export default function App() {
   return (
-    <Router>
-    <div className="App">
-      <header className="App-header">
-      <NavBar/>
-      </header>
-      <body>
-            <div className = 'contenedorArticulos' >
-            <Switch>
-              <Route exact path='/' component={ItemListContainer}/>
-              <Route exact path='/producto/:idProducto' component={ItemListContainer}/> {/* El route me crea la coneccion entre el componente y la ruta*/} 
-              <Route exact path='/detalle/:idProducto' component={ItemDetailCointainer}/>
-              <Route exact path='/cart/:id' component={CartWidget}></Route>
-            </Switch>
-          
-          
-        </div>      
-      </body>
-    </div>
-    </Router>
+        <CartContextProvider>
+            <Router>
+              <div className="App">
+                <header className="App-header">
+                  <NavBar/>
+                </header>
+
+                <body>
+                  <div className = 'contenedorArticulos' >
+                    <Switch>
+                      <Route exact path='/' component={ItemListContainer}/>
+                      <Route exact path='/producto/:idProducto' component={ItemListContainer}/> {/* El route me crea la coneccion entre el componente y la ruta*/} 
+                      <Route exact path='/detalle/:idProducto' component={ItemDetailCointainer}/>
+                      <Route exact path='/cart/:id' component={CartWidget}></Route>
+                    </Switch>
+                  </div>      
+                </body>
+              </div>
+            </Router>
+        </CartContextProvider>
+        
+
+    
   );
 }
 

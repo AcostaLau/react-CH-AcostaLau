@@ -23,10 +23,17 @@ const ButtonCount = () =>{
     )
 }
 
-export const Intercambiabilidad = () => {
+export const Intercambiabilidad = ({productos, ejecutarFunction}) => {
+        console.log(productos, ejecutarFunction)
         const [InputType, setInputType] = useState('Input')
+
         const ultraCambio = () =>{
             setInputType('boton')
+            
+        }
+        if(InputType === 'boton'){
+            ejecutarFunction({productos})
+            
         }
 
     return (
@@ -34,6 +41,7 @@ export const Intercambiabilidad = () => {
             {
                 InputType === 'Input' ? <InputCout/> : <ButtonCount/>
             }
+
         </div>
     )
 }
