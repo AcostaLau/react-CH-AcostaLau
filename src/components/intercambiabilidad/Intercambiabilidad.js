@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ButtonGroup } from 'react-bootstrap'
+
 import './intercambiabilidad.css'
 
 
@@ -7,7 +7,7 @@ import './intercambiabilidad.css'
 const InputCout = () =>{
     return (<button class="fancy">
     <span class="top-key"></span>
-    <p  class="" >Añadir al carrito</p>
+    <p  class="">Añadir al carrito</p>
     <span class="bottom-key-1"></span>
     <span class="bottom-key-2"></span>
     </button>)
@@ -23,18 +23,17 @@ const ButtonCount = () =>{
     )
 }
 
-export const Intercambiabilidad = ({productos, ejecutarFunction}) => {
-        console.log(productos, ejecutarFunction)
+export const Intercambiabilidad = ({producto}) => {
+        
+
+        console.log(producto)
         const [InputType, setInputType] = useState('Input')
 
         const ultraCambio = () =>{
             setInputType('boton')
-            
         }
-        if(InputType === 'boton'){
-            ejecutarFunction({productos})
-            
-        }
+
+
 
     return (
         <div onClick = {ultraCambio}>
