@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import { Cart } from '../cart/Cart';
 
 
 export const CartContext = createContext();
@@ -12,14 +13,15 @@ const CartContextProvider = ({children}) => {
         const buscarItem = cartList.find(e => e.id === itemAgregado.id)
 
         if (buscarItem) {
-            
+
             setCartList(cartList)
         }
         else{
             setCartList(e => [...e, itemAgregado])
         }
-    }
 
+    }
+    
 
     const removerItem = itemSacado => {
         setCartList(

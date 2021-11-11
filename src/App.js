@@ -4,7 +4,7 @@ import { ItemListContainer } from './components/ItemListContainer';
 import './app.css'
 import { ItemDetailCointainer } from './components/ItemDetailCointainer';
 import {NavBar} from './components/NavBar/NavBar';
-import { CartWidget } from './components/CartWidget';
+import { Cart } from './components/cart/Cart'
 import  CartContextProvider  from './components/context/CartContext';
 
 
@@ -26,7 +26,7 @@ export default function App() {
                       <Route exact path='/' component={ItemListContainer}/>
                       <Route exact path='/producto/:idProducto' component={ItemListContainer}/> {/* El route me crea la coneccion entre el componente y la ruta*/} 
                       <Route exact path='/detalle/:idProducto' component={ItemDetailCointainer}/>
-                      <Route exact path='/cart/:id' component={CartWidget}></Route>
+                      <Route exact path='/cart' component={Cart}></Route>
                     </Switch>
                   </div>      
                 </body>

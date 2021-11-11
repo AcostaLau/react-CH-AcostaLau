@@ -1,25 +1,32 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import './intercambiabilidad.css'
 
 
 
 const InputCout = () =>{
-    return (<button class="fancy">
+    return (
+    <button class="fancy">
     <span class="top-key"></span>
     <p  class="">Añadir al carrito</p>
     <span class="bottom-key-1"></span>
     <span class="bottom-key-2"></span>
-    </button>)
+    </button>
+
+    )
 }
 const ButtonCount = () =>{
     return (
-        <button class="fancy">
-    <span class="top-key"></span>
-    <p  class="" >Finalizar Compra</p>
-    <span class="bottom-key-1"></span>
-    <span class="bottom-key-2"></span>
-    </button>
+        <Link to={'/cart'}>
+            <button class="fancy">
+            <span class="top-key"></span>
+            <p  class="" >Finalizar Compra</p>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+            </button>
+        </Link>
+        
     )
 }
 
