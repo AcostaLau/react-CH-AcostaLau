@@ -12,6 +12,7 @@ const CartContextProvider = ({children}) => {
         const buscarItem = cartList.find(e => e.id === itemAgregado.id)
 
         if (buscarItem) {
+            
             setCartList(cartList)
         }
         else{

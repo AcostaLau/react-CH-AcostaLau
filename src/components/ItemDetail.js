@@ -10,7 +10,7 @@ import { CartContext } from './context/CartContext'
 export const ItemDetail = ({producto}) => {
         
     
-        const { cartList} = useContext(CartContext)
+        const { cartList, agregarItem} = useContext(CartContext)
 
         console.log('hola', cartList)
         return(
@@ -34,7 +34,7 @@ export const ItemDetail = ({producto}) => {
                                 </div>
                                 
                                 <div>
-                                    <Intercambiabilidad producto = {producto}/>
+                                    <Intercambiabilidad producto = {producto} agregarItem = {agregarItem}/>
                                 </div> 
                             </div>
                             

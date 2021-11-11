@@ -23,7 +23,7 @@ const ButtonCount = () =>{
     )
 }
 
-export const Intercambiabilidad = ({producto}) => {
+export const Intercambiabilidad = ({producto, agregarItem}) => {
         
 
         console.log(producto)
@@ -31,6 +31,7 @@ export const Intercambiabilidad = ({producto}) => {
 
         const ultraCambio = () =>{
             setInputType('boton')
+            agregarItem({producto})
         }
 
 
