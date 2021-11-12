@@ -3,12 +3,13 @@ import '../css/count.css'
 
 
 // ESTOS PARAMETROS LLEGAN DE ItemList.js
-export const ItemCount = ({producto, valorInicial, stock}) => {
-
-const [valor, setValor] = useState(valorInicial)
+export const ItemCount = ({producto, valorInicial, stock, cantidad}) => {
+      
+        const [valor, setValor] = useState(valorInicial)
 
         const mostrarAgregado = () =>{
                 console.log(`se agrego ${valor} de  ${producto} al carrito`)
+                cantidad(valor)
         }
 
 
@@ -26,6 +27,7 @@ const [valor, setValor] = useState(valorInicial)
         }
         else{
             setValor(valor - 1)
+            
         }   
     }
 

@@ -1,5 +1,4 @@
 import { createContext, useState } from 'react'
-import { Cart } from '../cart/Cart';
 
 
 export const CartContext = createContext();
@@ -7,24 +6,26 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([]) //adentro de este array se van a almacenar los productos del carrito 
-    const [cantidad , setCantidad] = useState()
+    const [cantidad, setCantidad] = useState(0)
 
     const agregarItem = itemAgregado => {
         const buscarItem = cartList.find(e => e.id === itemAgregado.id)
 
-        if (buscarItem) {
-            
+        if (!buscarItem) {
             setCartList([...cartList, itemAgregado])
             
             console.log('pasa el if')
         }
         else{ 
-            setCartList(cartList)    
+            alert('duplicado')
             console.log('pasa el else')
         }
 
     }
     
+    const cantidadAgregada = e => {
+        setCantidad(e)
+    }
 
     const removerItem = itemSacado => {
         setCartList(
@@ -42,7 +43,8 @@ const CartContextProvider = ({children}) => {
     return (
         <CartContext.Provider value = {{
             cartList,
-            cantidad,
+            cantidad, 
+            cantidadAgregada,
             agregarItem,
             removerItem,
             limpiarCarrito
