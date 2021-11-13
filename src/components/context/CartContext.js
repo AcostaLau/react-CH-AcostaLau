@@ -24,6 +24,7 @@ const CartContextProvider = ({children}) => {
     }
     
     const cantidadAgregada = e => {
+        console.log(e, 'soy cantidad vengo de cartContext la funcion')
         setCantidad(e)
     }
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Card } from 'react-bootstrap'
 import {ItemCount} from './ItemCount'
 import '../css/itemDetail.css'
@@ -11,11 +11,15 @@ export const ItemDetail = ({producto}) => {
         
     
         const { cartList, agregarItem, cantidadAgregada} = useContext(CartContext)
-        // const [cantidad , setCantidad] = useState(1)
 
-        const agregarCantidadAlCarrito = elemento => {
-            cantidadAgregada(elemento)
+        const [valor, setValor] = useState(0)
+
+        
+        const agregarCantidadAlCarrito = () => {
+            cantidadAgregada(valor)
         } 
+
+
         console.log('hola', cartList)
         return(
             <div className='contenedorDetalle'>
@@ -34,7 +38,7 @@ export const ItemDetail = ({producto}) => {
 
                             <div className='contenedorBotonesDetalle'>
                                 <div >
-                                    <ItemCount producto= {producto.nombre} valorInicial = {0} stock = {10} cantidad={agregarCantidadAlCarrito}/>'
+                                    <ItemCount producto= {producto.nombre} valorInicial = {valor} stock = {10} cantidad={setValor} funcion = {agregarCantidadAlCarrito}/>'
                                 </div>
                                 
                                 <div>
