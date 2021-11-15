@@ -17,7 +17,7 @@ export const ItemCount = ({ valorInicial, stock,  funcion}) => {
         }
     }
     const resta = () => {
-        if(cantidad === 0){
+        if(cantidad === 1){
             return cantidad
         }
         else{
@@ -32,15 +32,23 @@ export const ItemCount = ({ valorInicial, stock,  funcion}) => {
 
     return (
         <div>
+           
+
+            {prendido 
+            ?<div>
+                <Link to="/cart"><button className='quantity-add'>Terminar compra</button></Link> 
+                <Link to="/"><button className='quantity-add'>Seguir comprando</button></Link>
+            </div> 
+            
+
+            : 
             <div className='contenedorBoton'>
                 <button onClick={suma} className= 'suma'>+</button>
                 <p>{cantidad}</p>
                 <button onClick={resta} className='resta'>-</button>
+                <button className="quantity-add" onClick={addToCartHandler}>Agregar al carrito</button>
             </div>
-
-            {prendido 
-            ? <Link to="/cart"><button className='quantity-add'>Terminar compra</button></Link>
-            : <button className="quantity-add" onClick={addToCartHandler}>Agregar al carrito</button>
+            
             }
         </div>
         
