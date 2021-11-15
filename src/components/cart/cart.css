@@ -4,3 +4,8 @@ h1{
 .p-carrito{
     font-size: 2rem;
 }
+.removerItem{
+    height: 4rem;
+    width: 9rem;
+    font-size: 1rem;
+}

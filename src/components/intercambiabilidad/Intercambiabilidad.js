@@ -39,7 +39,7 @@ export const Intercambiabilidad = ({producto, agregarItem}) => {
         const ultraCambio = () =>{
             setInputType('boton')
             if(InputType === 'boton'){
-                agregarItem(producto)
+                agregarItem()
             }
             
         }

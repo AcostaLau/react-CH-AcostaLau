@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { Card } from 'react-bootstrap'
 import {ItemCount} from './ItemCount'
 import '../css/itemDetail.css'
-import {Intercambiabilidad} from './intercambiabilidad/Intercambiabilidad'
 import { CartContext } from './context/CartContext'
 
 
@@ -10,14 +9,15 @@ import { CartContext } from './context/CartContext'
 export const ItemDetail = ({producto}) => {
         
     
-        const { cartList, agregarItem, cantidadAgregada} = useContext(CartContext)
+        const { cartList, agregarItem} = useContext(CartContext)
 
-        const [valor, setValor] = useState(0)
+        const [valor, setValor] = useState(1)
 
         
-        const agregarCantidadAlCarrito = () => {
-            cantidadAgregada(valor)
-        } 
+        const sumarCantidad = (cantidadAgregada) => {
+            setValor(cantidadAgregada)
+            agregarItem({producto, cantidad: cantidadAgregada})
+        }
 
 
         console.log('hola', cartList)
@@ -36,15 +36,10 @@ export const ItemDetail = ({producto}) => {
                                 <Card.Text className='cardText'>sizes 8-10</Card.Text>
 
 
-                            <div className='contenedorBotonesDetalle'>
+
                                 <div >
-                                    <ItemCount producto= {producto.nombre} valorInicial = {valor} stock = {10} cantidad={setValor} funcion = {agregarCantidadAlCarrito}/>'
+                                    <ItemCount  valorInicial = {valor} stock = {10}  funcion = {sumarCantidad}/>'
                                 </div>
-                                
-                                <div>
-                                    <Intercambiabilidad producto = {producto} agregarItem = {agregarItem}/>
-                                </div> 
-                            </div>
                             
                         </Card.Body>
                 </Card>

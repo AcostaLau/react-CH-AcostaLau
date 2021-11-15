@@ -6,31 +6,24 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([]) //adentro de este array se van a almacenar los productos del carrito 
-    const [cantidad, setCantidad] = useState(0)
 
     const agregarItem = itemAgregado => {
-        const buscarItem = cartList.find(e => e.id === itemAgregado.id)
+        const buscarItem = cartList.find(e => e.producto.id === itemAgregado.producto.id)
 
-        if (!buscarItem) {
-            setCartList([...cartList, itemAgregado])
-            
-            console.log('pasa el if')
+        if (buscarItem) {
+           buscarItem.cantidad = buscarItem.cantidad + itemAgregado.cantidad
+           setCartList(cartList)
+           console.log('pasa el if')
         }
         else{ 
-            alert('duplicado')
+            setCartList(previoItem => [...previoItem, itemAgregado])
             console.log('pasa el else')
         }
 
     }
-    
-    const cantidadAgregada = e => {
-        console.log(e, 'soy cantidad vengo de cartContext la funcion')
-        setCantidad(e)
-    }
-
     const removerItem = itemSacado => {
         setCartList(
-            cartList.filter(e => e.id !== itemSacado)
+            cartList.filter(e => e.producto.id !== itemSacado)
         )
     }
 
@@ -44,8 +37,6 @@ const CartContextProvider = ({children}) => {
     return (
         <CartContext.Provider value = {{
             cartList,
-            cantidad, 
-            cantidadAgregada,
             agregarItem,
             removerItem,
             limpiarCarrito
