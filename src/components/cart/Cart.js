@@ -32,6 +32,5 @@ export const Cart = () => {
           ))}
         </div>
       )
-   
     
 }
