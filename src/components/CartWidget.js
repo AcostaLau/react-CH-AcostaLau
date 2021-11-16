@@ -13,8 +13,9 @@ export const CartWidget = () => {
             ? <div>
             <Link to="/cart">
                 <AiOutlineShoppingCart className='cartWidget' />
+                <p className='cantidad'>{cartList.length}</p>
             </Link>
-        </div>
+            </div>
             : ''
         }
         </div>
