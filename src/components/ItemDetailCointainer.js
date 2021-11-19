@@ -1,15 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import { getFirebase } from './firebase/getFirebase'
 import { ItemDetail } from './ItemDetail'
-import { arrayProductos } from './ItemList'
+
 
 export const ItemDetailCointainer = () => {
-
+    const [product, setProducto] = useState([])
     const {idProducto} = useParams()
-    const producto = arrayProductos.find(producto => producto.id.toString() === idProducto)
+
+    useEffect(() => {
+        
+        const db = getFirebase()
+        const dbQuery = db.collection('Items').doc(idProducto).get()
+
+        dbQuery
+        .then(resp => setProducto( { id: resp.id, ...resp.data() } ) )
+        .catch(err => alert(`error ${err}`))
+
+        console.log(product, 'hola  ')
+        }, [])
+            
+
     return (
         <div>
-        <ItemDetail producto={producto}/>
+        <ItemDetail producto={product}/>
         </div>
     )
 }
