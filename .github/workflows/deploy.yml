@@ -22,8 +22,8 @@ jobs:
 
       - name: Build JS files
         run: |
-          npm
-          npm build
+          npm install
+          npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
