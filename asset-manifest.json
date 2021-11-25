@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "https://acostalau.github.io/react-CH-AcostaLau/static/css/main.3955a7ae.chunk.css",
+    "main.js": "https://acostalau.github.io/react-CH-AcostaLau/static/js/main.8ebdeaba.chunk.js",
+    "main.js.map": "https://acostalau.github.io/react-CH-AcostaLau/static/js/main.8ebdeaba.chunk.js.map",
+    "runtime-main.js": "https://acostalau.github.io/react-CH-AcostaLau/static/js/runtime-main.21d1cbd7.js",
+    "runtime-main.js.map": "https://acostalau.github.io/react-CH-AcostaLau/static/js/runtime-main.21d1cbd7.js.map",
+    "static/css/2.c1256375.chunk.css": "https://acostalau.github.io/react-CH-AcostaLau/static/css/2.c1256375.chunk.css",
+    "static/js/2.9a057eac.chunk.js": "https://acostalau.github.io/react-CH-AcostaLau/static/js/2.9a057eac.chunk.js",
+    "static/js/2.9a057eac.chunk.js.map": "https://acostalau.github.io/react-CH-AcostaLau/static/js/2.9a057eac.chunk.js.map",
+    "index.html": "https://acostalau.github.io/react-CH-AcostaLau/index.html",
+    "static/css/2.c1256375.chunk.css.map": "https://acostalau.github.io/react-CH-AcostaLau/static/css/2.c1256375.chunk.css.map",
+    "static/css/main.3955a7ae.chunk.css.map": "https://acostalau.github.io/react-CH-AcostaLau/static/css/main.3955a7ae.chunk.css.map",
+    "static/js/2.9a057eac.chunk.js.LICENSE.txt": "https://acostalau.github.io/react-CH-AcostaLau/static/js/2.9a057eac.chunk.js.LICENSE.txt",
+    "static/media/logo.a2a9d614.png": "https://acostalau.github.io/react-CH-AcostaLau/static/media/logo.a2a9d614.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21d1cbd7.js",
+    "static/css/2.c1256375.chunk.css",
+    "static/js/2.9a057eac.chunk.js",
+    "static/css/main.3955a7ae.chunk.css",
+    "static/js/main.8ebdeaba.chunk.js"
+  ]
+}
