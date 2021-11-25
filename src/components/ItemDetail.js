@@ -34,7 +34,7 @@ export const ItemDetail = ({producto}) => {
                                 <Card.Title className='nombreDetalle'>{producto.nombre}</Card.Title>
                                 </div>
                                 <Card.Text className='cardText'>sizes 8-10</Card.Text>
-
+                                <Card.Text className='cardText'>Coste: ${producto.precio}</Card.Text>
 
 
                                 <div >

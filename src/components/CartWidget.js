@@ -11,12 +11,14 @@ export const CartWidget = () => {
         <div>
             {cartList.length
             ? <div>
-            <Link to="/cart">
+            <Link to="/cart" className='containerCartWidget'>
                 <AiOutlineShoppingCart className='cartWidget' />
                 <p className='cantidad'>{cartList.length}</p>
             </Link>
             </div>
-            : ''
+            :   <Link to="/cart" className='containerCartWidget'>
+                    <AiOutlineShoppingCart className='cartWidget' />
+                </Link>
         }
         </div>
         

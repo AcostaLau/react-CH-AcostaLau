@@ -13,24 +13,20 @@ export const Item = ({data}) => {
     
 
     return(
-        <div>
+        <>
             <Card style={{ width: '33rem' }}>
                 {/* llamamos a la imagen a traves de data.imagen */}
                 <Card.Img variant="top" src= {data.imagen} />
                 <Card.Body>
                     {/* llamamos a la imagen a traves de data.nombre */}
                     <Card.Title>{data.nombre}</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text>
                     {/* llamamos a la imagen a traves de data.nombre y ademas le pasamos como parametro eso para que pueda hacer la cuneta  */}
                     <div className='contenedorBotonesItem'>
                         <Link  to= {`/detalle/${data.id}`} ><button className='botonVerMas'>Ver mas</button></Link>
                     </div> 
                 </Card.Body>
             </Card>
-        </div>
+        </>
     )
 }
 

@@ -1,9 +1,23 @@
 .cartWidget{
     height: 100%;
     width: 100%;
+    color: #fff;
 }
 
 .cantidad{
     font-size:1rem;
     color: #fff;
+}
+.containerCartWidget{
+    display: flex;
+    height: 4rem;
+    width: 7rem;
+    align-items: center;
+    text-decoration: none;
+}
+.containerCartWidget p{
+    font-size: 2rem;
+    text-decoration: none;
+    border: none;
+
 }

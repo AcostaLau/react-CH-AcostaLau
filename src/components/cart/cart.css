@@ -4,6 +4,14 @@ h1{
 .p-carrito{
     font-size: 2rem;
 }
+.removerItems{
+    height: 4rem;
+    width: 17rem;
+    font-size: 5rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
 .removerItem{
     height: 4rem;
     width: 9rem;
@@ -14,8 +22,326 @@ h1{
 }
 .go-to-home{
     font-size: 1rem;
+    text-align: center;
 }
 
 .order-id{
     font-size: 1rem;
 }
+.cartVacio{
+    display: flex;
+    
+}
+.cartVacio p{
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+.cartVacio a{
+    
+    font-size: 2rem;
+}
+
+input{
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.5rem;
+}
+
+.cardDetailCart{
+    width: 25rem;
+    display: flex;
+    flex-direction: row;
+
+}
+.containerCart{
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+}
+.containerCartBody{
+    width: 80rem;
+}
+
+.containerBody{
+    display: flex;
+    align-items: center;
+}
+
+.talles{
+    width: 13rem;
+}
+.nombreDetalle{
+    font-size: 2rem;
+}
+/* BOTOE ELIMINAR */
+.removerItem{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+   }
+   
+   .removerItem, .removerItem span {
+    transition: 200ms;
+   }
+   
+   .removerItem .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+   }
+   
+   .removerItem .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .removerItem svg {
+    width: 15px;
+    fill: #eee;
+   }
+   
+   .removerItem:hover {
+    background: #ff3636;
+   }
+   
+   .removerItem:hover .text {
+    color: transparent;
+   }
+   
+   .removerItem:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+   }
+   
+   .removerItem:focus {
+    outline: none;
+   }
+   
+   .removerItem:active .icon svg {
+    transform: scale(0.8);
+   }
+
+
+   /* REMOVER TODOS LOS ITEMS */
+   .removerItems {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+   }
+   
+   .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+        background: linear-gradient( to left, hsl(138deg 100% 16%) 0%, hsl(114deg 100% 32%) 8%, hsl(114deg 100% 32%) 92%, hsl(122deg 100% 16%) 100% );
+   }
+   
+   .front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(138deg 100% 37%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .removerItems:hover {
+    filter: brightness(110%);
+   }
+   
+   .removerItems:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .removerItems:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   .removerItems:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .removerItems:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   .removerItems:focus:not(:focus-visible) {
+    outline: none;
+   }
+
+
+.compraFinalizada{
+       font-size: 4rem;
+       color: rgb(37, 199, 37) ;
+   }
+.order-id{
+    font-size: 2rem;
+}
+
+.go-to-home{
+    font-size: 1.5rem;
+}
+
+.containerFinalizarCompra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titleForm{
+    font-size: 2rem;
+    text-align: center;
+}
+.cartForm{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* SEND */
+.closeButton {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+   }
+   
+   .closeButton span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+   }
+   
+   .closeButton svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+   }
+   
+   .closeButton:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+   }
+   
+   .closeButton:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+   }
+   
+   .closeButton:hover span {
+    transform: translateX(5em);
+   }
+   
+   .closeButton:active {
+    transform: scale(0.95);
+   }
+   
+   @keyframes fly-1 {
+    from {
+     transform: translateY(0.1em);
+    }
+   
+    to {
+     transform: translateY(-0.1em);
+    }
+   }
+   
+   
+
+   /* CLOSE FORM  */
+   .closeForm{
+    display: flex;
+    height: 5rem;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #e606064b;
+    border-radius: 16px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: rgb(216, 0, 0);
+    font-size: 20px;
+   }
+   
+   .closeForm > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
+   
+   .closeForm:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+   }
+   
+   .closeForm:hover {
+    box-shadow: 9px 9px 33px #200101, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+   }
+
+   .modalFooter{
+       justify-content: space-between;
+   }

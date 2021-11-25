@@ -7,11 +7,14 @@
 }
 
 
-.contenedor{
+
+
+.containerItemList{
     display: flex;
-    justify-content: space-between;
-    width: 90vw;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-
-
+.h1{
+    text-align: center;
+}

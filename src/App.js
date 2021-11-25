@@ -20,15 +20,13 @@ export default function App() {
                   <NavBar/>
                 </header>
 
-                <body>
-                  <div className = 'contenedorArticulos' >
+                <body>   
                     <Switch>
                       <Route exact path='/' component={ItemListContainer}/>
                       <Route exact path='/producto/:idProducto' component={ItemListContainer}/> {/* El route me crea la coneccion entre el componente y la ruta*/} 
                       <Route exact path='/detalle/:idProducto' component={ItemDetailCointainer}/>
                       <Route exact path='/cart' component={Cart}></Route>
-                    </Switch>
-                  </div>      
+                    </Switch>    
                 </body>
               </div>
             </Router>

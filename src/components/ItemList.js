@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router'
 import { getFirebase } from './firebase/getFirebase';
 import { Item } from './Item'
-
+import '../css/itemList.css'
 
 export let titulo = '';
 export const ItemList = () => {
@@ -27,11 +27,14 @@ export const ItemList = () => {
     return (
 
         // a 'productos' que ahora contiene el array de objetos le realizamos un map.
+        
         productos.map((product) =>{
             
             return(
-    
+                    <>
                         <Item key={product.id} data = {product}></Item>
+                    </>
+                        
                     
                 // a este map le pasamos el id y por data le pasamos todo el objeto.
                 
