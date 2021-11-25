@@ -18,9 +18,9 @@ export const ItemDetailCointainer = () => {
         .catch(err => alert(`error ${err}`))
 
         console.log(product, 'hola  ')
+        //eslint-disable-next-line
         }, [])
             
-
     return (
         <div>
         <ItemDetail producto={product}/>

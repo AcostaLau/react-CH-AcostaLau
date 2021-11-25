@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
 import { getFirebase } from '../firebase/getFirebase'
 import firebase from 'firebase'
-import { ButtonGroup, Card, Form, Modal } from 'react-bootstrap'
+import { Card, Form, Modal } from 'react-bootstrap'
 import './cart.css'
 import Button from '@restart/ui/esm/Button'
 
@@ -169,6 +169,7 @@ export const Cart = () => {
                 <span>Back</span>
               </Button>
               <Button variant="primary"  onClick={() =>{
+                //eslint-disable-next-line
                 if (formData.length = true) {
                   handleOnClick()
                 }else{
