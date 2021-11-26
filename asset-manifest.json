@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://acostalau.github.io/react-CH-AcostaLau/static/css/main.3955a7ae.chunk.css",
-    "main.js": "https://acostalau.github.io/react-CH-AcostaLau/static/js/main.8ebdeaba.chunk.js",
-    "main.js.map": "https://acostalau.github.io/react-CH-AcostaLau/static/js/main.8ebdeaba.chunk.js.map",
+    "main.js": "https://acostalau.github.io/react-CH-AcostaLau/static/js/main.a09555a6.chunk.js",
+    "main.js.map": "https://acostalau.github.io/react-CH-AcostaLau/static/js/main.a09555a6.chunk.js.map",
     "runtime-main.js": "https://acostalau.github.io/react-CH-AcostaLau/static/js/runtime-main.21d1cbd7.js",
     "runtime-main.js.map": "https://acostalau.github.io/react-CH-AcostaLau/static/js/runtime-main.21d1cbd7.js.map",
     "static/css/2.c1256375.chunk.css": "https://acostalau.github.io/react-CH-AcostaLau/static/css/2.c1256375.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.c1256375.chunk.css",
     "static/js/2.9a057eac.chunk.js",
     "static/css/main.3955a7ae.chunk.css",
-    "static/js/main.8ebdeaba.chunk.js"
+    "static/js/main.a09555a6.chunk.js"
   ]
 }
