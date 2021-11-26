@@ -13,8 +13,6 @@ const CartContextProvider = ({children}) => {
         if (buscarItem) {
            buscarItem.cantidad = buscarItem.cantidad + itemAgregado.cantidad
            setCartList(cartList)
-           console.log('pasa el if')
-
         }
         else{ 
             setCartList(previoItem => [...previoItem, itemAgregado])
@@ -36,7 +34,6 @@ const CartContextProvider = ({children}) => {
         const precioAcumulado = (acum, prod) => (acum + (prod.producto.precio * prod.cantidad))
         return(cartList.reduce(precioAcumulado, 0))
     }
-    console.log('hola soy cartlist dedse cartContext', cartList)
 
 
     return (

@@ -25,8 +25,6 @@ export const Cart = () => {
 
 
     const generarOrden = () => {
-      // e.preventDefault()
-
       let orden = {};
       orden.date = firebase.firestore.Timestamp.fromDate(new Date());
       orden.buyer = formData;
@@ -38,7 +36,6 @@ export const Cart = () => {
 
         return {id, nombre, precio}
       })
-      console.log(orden)
       const dbQuery = getFirebase()
       dbQuery.collection('orders').add(orden)
       .then(response => setOrderId(response.id))
@@ -63,9 +60,7 @@ export const Cart = () => {
       handleClose()
       limpiarCarrito()
       generarOrden()
-      // handleChange()
     }
-    console.log(formData)
     return (
 
       
@@ -128,8 +123,7 @@ export const Cart = () => {
 
                                 <div >
 
-                                    <button class="noselect removerItem" onClick = {() => removerItem(itemAdded.producto.id)}><span class="text">Eliminar</span><span class="icon"><svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
-                                {/* <button  className='removerItem' onClick = {() => removerItem(itemAdded.producto.id)}>eliminar producto</button> */}
+                                    <button class="noselect removerItem" onClick = {() => removerItem(itemAdded.producto.id)}><span class="text">Eliminar</span><span class="icon"><svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>                                
                                 </div>
                             
                                 </Card.Body>
@@ -153,14 +147,12 @@ export const Cart = () => {
               </Modal.Header>
             <Modal.Body>
             <form className='cartForm'
-            // onSubmit={generarOrden}
             onChange={handleChange}
             
             > 
               <input type='text' name='name' placeholder='Nombre' value={formData.name} required></input>
               <input type='text' name='phone' placeholder='Telefono' value={formData.phone} required></input>
               <input type='email' name='email' placeholder='Email' value={formData.email} required></input>
-              {/* <button>Enviar</button> */}
             </form>
             </Modal.Body>
             <Modal.Footer className='modalFooter'>
@@ -189,19 +181,6 @@ export const Cart = () => {
               </Button>
             </Modal.Footer>
           </Modal>
-
-          
-          
-            {/* <form 
-            // onSubmit={generarOrden}
-            // onChange={handleChange}
-            
-            > 
-              <input type='text' name='name' placeholder='Nombre' value={formData.name}></input>
-              <input type='text' name='phone' placeholder='Telefono' value={formData.phone}></input>
-              <input type='email' name='email' placeholder='Email' value={formData.email}></input>
-              <button>Enviar</button>
-            </form> */}
         </div>
       )
     

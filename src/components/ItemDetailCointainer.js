@@ -16,8 +16,6 @@ export const ItemDetailCointainer = () => {
         dbQuery
         .then(resp => setProducto( { id: resp.id, ...resp.data() } ) )
         .catch(err => alert(`error ${err}`))
-
-        console.log(product, 'hola  ')
         //eslint-disable-next-line
         }, [])
             

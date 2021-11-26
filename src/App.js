@@ -9,8 +9,6 @@ import  CartContextProvider  from './components/context/CartContext';
 
 
 
-// como es una function normal el export default puede ir al inicio.
-// si fuera una arrow deberia ir al final como el la linea 17
 export default function App() {
   return (
         <CartContextProvider>
@@ -37,5 +35,3 @@ export default function App() {
   );
 }
 
-
-//export default App;  ===> de esta forma se utilizaria si fuese una arrow function, como lo hice en NavBar

@@ -51,8 +51,7 @@ export const ItemCount = ({ valorInicial, stock,  funcion}) => {
                     <span class="bottom-key-1"></span>
                     <span class="bottom-key-2"></span>
                 </Link>
-                {/* <Link to="/cart"><button className='quantity-add'>Terminar compra</button></Link>  */}
-                {/* <Link to="/"><button className='quantity-add'>Seguir comprando</button></Link> */}
+                
             </div> 
             
 
@@ -67,7 +66,7 @@ export const ItemCount = ({ valorInicial, stock,  funcion}) => {
                     <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
                     </svg>
                 </button>
-                {/* <button className="quantity-add" onClick={addToCartHandler}>Agregar al carrito</button> */}
+                
             </div>
             
             }

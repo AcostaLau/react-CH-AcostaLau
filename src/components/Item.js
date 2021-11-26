@@ -1,9 +1,8 @@
 import React from 'react'
-//import { ItemCount } from './ItemCount'
 import { Card } from 'react-bootstrap'
 import '../css/item.css'
 import { Link } from 'react-router-dom'
-// import { ItemDetailCointainer } from './ItemDetailCointainer'
+
 
 
 
