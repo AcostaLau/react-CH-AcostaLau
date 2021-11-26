@@ -3,6 +3,7 @@
 ## Ecommerce coderHouse
 
 Proyecto de un ecommerce para el curso de REACTjs de coderHouse.
+Una vez que usted apreta el link dentro de la web debe apretar 'inicio'
 DEMO: https://acostalau.github.io/react-CH-AcostaLau/
 
 - REACTjs
