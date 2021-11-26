@@ -1,3 +1,27 @@
+# Lautaro Acosta
+
+## Ecommerce coderHouse
+
+Proyecto de un ecommerce para el curso de REACTjs de coderHouse.
+DEMO: https://acostalau.github.io/react-CH-AcostaLau/
+
+- REACTjs
+- BOOTSRAP (2.0.0-rc.0)
+- FIREBASE (8.9.1)
+## Features
+
+- CATALOGO DE COMPRA
+- CARRITO
+- LLAMADA A LA API (FIREBASE)
+- FILTRAR POR PRODUCTOS
+
+## Contacto
+- soylautaroacosta@gmail.com
+- Linkedin: https://www.linkedin.com/in/lautaro-pablo-acosta-ba7a961b8/
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
