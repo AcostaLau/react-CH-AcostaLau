@@ -19,7 +19,8 @@ export const Cart = () => {
     const [formData, setFormData] = useState({
       name:'',
       phone: '',
-      email:''
+      email:'',
+      emailConfirm:''
     })
     const {cartList, limpiarCarrito,removerItem, sumaTotal} = useContext(CartContext)
 
@@ -74,16 +75,13 @@ export const Cart = () => {
           
             ?<div className='containerFinalizarCompra'>
               <button className='removerItems' onClick = {() => handleShow()}>
-            <span class="shadow"></span>
-            <span class="edge"></span>
-            <span class="front text"> Terminar compra
-            </span>
-          </button> 
-           <h3>Monto total : {sumaTotal()}</h3>
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> Terminar compra</span>
+              </button> 
+              <h3>Monto total : {sumaTotal()}</h3>
             </div> 
-            
-            
-            
+
             :orderId===""
             ? 
             <div className='cartVacio'>
@@ -153,6 +151,7 @@ export const Cart = () => {
               <input type='text' name='name' placeholder='Nombre' value={formData.name} required></input>
               <input type='text' name='phone' placeholder='Telefono' value={formData.phone} required></input>
               <input type='email' name='email' placeholder='Email' value={formData.email} required></input>
+              <input type='email' name='emailConfirm' placeholder='Confirmar email' value={formData.emailConfirm} required></input>
             </form>
             </Modal.Body>
             <Modal.Footer className='modalFooter'>
@@ -163,7 +162,12 @@ export const Cart = () => {
               <Button variant="primary"  onClick={() =>{
                 //eslint-disable-next-line
                 if (formData.length = true) {
-                  handleOnClick()
+                  if(formData.email === formData.emailConfirm){
+                    handleOnClick()
+                  }else{
+                    return alert('confirmar mail')
+                  }
+                  
                 }else{
                   return alert('completar fomulario')
                  
